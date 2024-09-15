@@ -1,6 +1,3 @@
-### `README.md`
-
-```markdown
 # IconGen
 
 A utility tool for extracting, converting, and formatting chain icons from the Cosmos chain-registry repository. This project automates the process of finding and downloading relevant images from multiple blockchain directories, converting them to a uniform format, and resizing them for use in applications.
