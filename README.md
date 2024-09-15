@@ -1,10 +1,10 @@
 # IconGen
 
-A utility tool for extracting, converting, and formatting chain icons from the Cosmos chain-registry repository. This project automates the process of finding and downloading relevant images from multiple blockchain directories, converting them to a uniform format, and resizing them for use in applications.
+A utility tool for extracting, converting, and formatting chain icons from the Cosmos chain-registry repository. Automates the process of fetching relevant logos/images for multiple networks and converting them to a specified format, resized for use in other applications.
 
 ## Overview
 
-The `icongen` project is designed to scan through the [Cosmos chain-registry](https://github.com/cosmos/chain-registry) repository, find images matching specific criteria, convert them to the desired format (`WEBP` with transparent backgrounds), and resize them to a square of 100x100 pixels.
+This script will scan through a locally cloned copy of the [Cosmos chain-registry](https://github.com/cosmos/chain-registry) repository, find images matching specific criteria, convert them to the desired format (`WEBP` with transparent backgrounds), and resize them to a square of 100x100 pixels.
 
 ### Project Structure
 
@@ -18,7 +18,7 @@ icongen/
 
 ## How It Works
 
-1. **Directory Scanning**: The script scans each subdirectory in the `chain-registry` repository, ignoring any directories that start with `_` or are named `testnets`.
+1. **Directory Scanning**: The script scans each subdirectory in the `chain-registry` repository, ignoring any directories that start with `_`  and the `testnets` directory.
 2. **JSON Parsing**: For each directory, it checks for `assetlist.json` and `chain.json` files to extract key values such as `display` and `chain_name`.
 3. **Image Matching**: The script searches for images in the `images` subdirectory that match either the parent directory name, the `display` name from `assetlist.json`, or the `chain_name` from `chain.json`.
 4. **Image Conversion**: Matching images are converted to `WEBP` format, resized to 100x100 pixels, and saved in the `chain_icons` output directory.
