@@ -26,10 +26,11 @@ Ensure you have the following installed:
 
 ## Process
 
-1. **Directory Scanning**: The script scans each subdirectory in the `chain-registry` repository, ignoring any directories that start with `_`  and the `testnets` directory.
+1. **Mode 1**: The script scans each subdirectory in the `chain-registry` repository, ignoring any directories that start with `_`  and the `testnets` directory.
 2. **JSON Parsing**: For each directory, it checks for `assetlist.json` and `chain.json` files to extract key values such as `display` and `chain_name`.
 3. **Image Matching**: The script searches for images in the `images` subdirectory that match either the parent directory name, the `display` name from `assetlist.json`, or the `chain_name` from `chain.json`.
-4. **Image Conversion**: Matching images are converted to `WEBP` format, resized to 100x100 pixels, and saved in the `chain_icons` output directory.
+4. **Mode 2**: The script scans for valid image files in the local `jobs` directory.
+6. **Image Conversion**: Matching images are converted to `WEBP` format, resized to 100x100 pixels, and saved in the `chain_icons` output directory.
 
 ## Installation
 
