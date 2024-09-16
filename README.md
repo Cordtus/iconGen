@@ -57,6 +57,8 @@ To run and process images:
 node convertImages.js
 ```
 
+Select either option 1, for `chain-registry` logo auto-generation or option 2, for custom icons using images from the `jobs` directory.
+
 ### Output
 
 Processed images will be saved in the `chain_icons` directory in `WEBP` format with a transparent background, at 100x100 pixels.
